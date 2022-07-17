@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: local("TT Lakes"),
+        url('font_TTLakes/TTLakes-Regular.woff') format("woff"),
+        url('font_TTLakes/TTLakes-Regular.ttf') format("truetype"),
+        url('font_TTLakes/TTLakes-Regular.svg') format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: local("TT Lakes"),
+        url('font_TTLakes/TTLakes-Bold.woff') format("woff"),
+        url('font_TTLakes/TTLakes-Bold.ttf') format("truetype"),
+        url('font_TTLakes/TTLakes-Bold.svg') format("svg");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: local("TT Lakes"),
+        url('font_TTLakes/TTLakes-Italic.woff') format("woff"),
+        url('font_TTLakes/TTLakes-Italic.ttf') format("truetype"),
+        url('font_TTLakes/TTLakes-Italic.svg') format("svg");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: local("TT Lakes"),
+        url('font_TTLakes/TTLakes-BoldItalic.woff') format("woff"),
+        url('font_TTLakes/TTLakes-BoldItalic.ttf') format("truetype"),
+        url('font_TTLakes/TTLakes-BoldItalic.svg') format("svg");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: local("TT Lakes"),
+        url('font_TTLakes/TTLakes-Medium.woff') format("woff"),
+        url('font_TTLakes/TTLakes-Medium.ttf') format("truetype"),
+        url('font_TTLakes/TTLakes-Medium.svg') format("svg");
+    font-style: normal;
+    font-weight: medium;
+}
+
+body {
+    font-family: "TT Lakes", "Arial", sans-serif;
+    background-color: #F8F8F8;
+    margin: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+/* HEADER */
+
+.header {
+    height: max-content;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    text-transform: uppercase;
+    padding: 16px 16px 16px 0;
+    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    box-sizing: border-box;
+}
+
+.brand {
+    background-color: #FFF;
+    width: 240px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+}
+
+.brand__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    padding: 0 16px 0 16px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+}
+
+
+@media (max-width: 767.9px) {
+    
+    .container {
+        padding-left: 16px;
+        overflow: hidden;
+    }
+
+    .content {
+        padding-top: 16px;
+    }
+    
+    .small {
+        display: none;
+    }
+
+    .swiper-container {
+        width: 240px;
+        height: 74px;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #B5B6BC;
+    }
+}
+
+
+
+/* Для 1120px и выше */
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 0 0 32px;
+        max-width: 1120px;
+        margin: auto;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    /* БРЕНДЫ */
+    
+    .brands {
+        display: flex;
+        gap: 32px;
+        row-gap: 16px;
+        flex-wrap: wrap;
+    }
+    
+    /* ПОКАЗАТЬ ВСЕ */
+    
+    .read {
+        display: flex;
+        gap: 8px;
+        width: max-content;
+    }
+    
+    .hidden {
+        display: none;
+    }    
+}
+
+
+/* Для 768px */
+
+@media (min-width: 768px) and (max-width: 1119.9px) {
+    .container {
+        padding: 0 0 0 24px;
+    }
+
+    .brands {
+        column-gap: 24px;
+    }
+
+    .brand {
+        width: 224px;
+    }
+
+    .brand__item {
+        width: 224px;
+    }
+
+    .brand--medium {
+        display: none;
+    }
+}
