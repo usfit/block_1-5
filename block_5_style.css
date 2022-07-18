@@ -60,6 +60,13 @@ ul {
     list-style: none;
 }
 
+button {
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -71,16 +78,20 @@ a:hover {
     opacity: 0.5;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 /* HEADER */
 
 .header {
-    height: max-content;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
     text-transform: uppercase;
-    padding: 16px 16px 16px 0;
+    padding: 16px 0 16px 0;
     background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
     box-sizing: border-box;
 }
@@ -91,6 +102,8 @@ a:hover {
     height: 72px;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .brand__item {
@@ -115,14 +128,18 @@ a:hover {
 
 
 @media (max-width: 767.9px) {
+
     
     .container {
-        padding-left: 16px;
         overflow: hidden;
     }
 
+    .title {
+        padding: 0 16px;
+    }
+
     .content {
-        padding-top: 16px;
+        padding: 16px;
     }
     
     .small {
@@ -137,6 +154,10 @@ a:hover {
     .swiper-pagination-bullet {
         background-color: #B5B6BC;
     }
+
+    .swiper-pagination-bullets {
+        top: 184px;
+    }
 }
 
 
@@ -148,7 +169,6 @@ a:hover {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: 0 0 0 32px;
         max-width: 1120px;
         margin: auto;
     }
@@ -157,6 +177,11 @@ a:hover {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        padding: 0 31px 0 31px;
+    }
+
+    .title {
+        padding: 0 32px;
     }
     
     /* БРЕНДЫ */
@@ -166,27 +191,31 @@ a:hover {
         gap: 32px;
         row-gap: 16px;
         flex-wrap: wrap;
+        height: 165px;
+        transition: 0.3s;
+
+        overflow-y: hidden;
     }
     
     /* ПОКАЗАТЬ ВСЕ */
     
-    .read {
+    .read-more {
         display: flex;
         gap: 8px;
         width: max-content;
+        align-items: center;
     }
     
     .hidden {
-        display: none;
+        height: 248px;
     }    
 }
-
 
 /* Для 768px */
 
 @media (min-width: 768px) and (max-width: 1119.9px) {
-    .container {
-        padding: 0 0 0 24px;
+    .content {
+        padding: 0 24px 0 24px;
     }
 
     .brands {
@@ -201,7 +230,11 @@ a:hover {
         width: 224px;
     }
 
-    .brand--medium {
-        display: none;
-    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023.9px) {
+    .hidden {
+        height: 336px;
+    }   
 }
